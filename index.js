@@ -29,26 +29,29 @@ Ao final deve se exibir uma mensagem:
 
 
 let nameHero = "Luanb13";
-let experience = 3500;
+let experience = 2000;
 
-
+let nivel;
 
 if (experience <= 1000) {
-    console.log(`O Herói de nome ${nameHero} está no nível de Ferro `);
-}else if(experience > 1001 && experience <= 2000){
-    console.log(`O Herói de nome ${nameHero} está no nível de Bronze `);
-}else if(experience > 2001 && experience <= 5000){
-    console.log(`O Herói de nome ${nameHero} está no nível de Prata `);
-}else if(experience > 5001 && experience <= 6000){
-    console.log(`O Herói de nome ${nameHero} está no nível de Ouro `);
-}else if(experience > 6001 && experience <= 7000){
-    console.log(`O Herói de nome ${nameHero} está no nível de Platina `);
-}else if(experience > 7001 && experience <= 8000){
-    console.log(`O Herói de nome ${nameHero} está no nível de Ascendente `);
-}else if(experience > 8001 && experience <= 9000){
-    console.log(`O Herói de nome ${nameHero} está no nível de Imortal `);
+    nivel = "Ferro";
+}else if(experience >= 1001 && experience <= 2000){
+    nivel = "Bronze";
+}else if(experience >= 2001 && experience <= 5000){
+    nivel = "Prata";
+}else if(experience >= 5001 && experience <= 6000){
+    nivel = "Ouro";
+}else if(experience >= 6001 && experience <= 7000){
+    nivel = "Platina";
+}else if(experience >= 7001 && experience <= 8000){
+   nivel = "Ascendente";
+}else if(experience >= 8001 && experience <= 9000){
+    nivel = "Imortal";
 }else if(experience >= 9001){
-    console.log(`O Herói de nome ${nameHero} está no nível de Radiante `);
+    nivel = "Radiante";
 }
+
+console.log(`O Herói de nome ${nameHero} está no nível de ${nivel} `);
+
 
 /* Não vi a necessidade de fazer um laço de repetição*/
